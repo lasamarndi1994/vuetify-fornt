@@ -1,6 +1,6 @@
 <script setup>
 import { ref } from "vue";
-import WidgetFive from './components/WidgetFive.vue';
+import EmployeeOfMonth from './components/EmployeeOfMonth.vue';
 import StatisticsOverview from './components/StatisticsOverview.vue';
 import AttendanceLeaves from './components/AttendanceLeaves.vue';
 import WorkingHours from './components/WorkingHours.vue';
@@ -53,16 +53,10 @@ const model = ref(null)
     </v-row>
 
     <v-row class="mt-2">
-        <v-clo cols="12" md="6" sm="12">
-            <v-card>
-                <v-card-text>Hqqq</v-card-text>
-            </v-card>
-        </v-clo>
-        <v-clo cols="12" md="6" sm="12">
-            <v-card>
-                <v-card-text>sss</v-card-text>
-            </v-card>
-        </v-clo>
+        <v-col cols="12" md="12" sm="12">
+            <EmployeeOfMonth />
+        </v-col>
     </v-row>
+
 
 </template>
