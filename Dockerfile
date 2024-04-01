@@ -1,23 +1,18 @@
-# Start your image with a node base image
-FROM node:18-alpine
-
-# The /app directory should act as the main application directory
+# first stage builds vue
+FROM node:18 as build-stage
+WORKDIR /build
+COPY . .
+RUN npm install
+RUN npm run build
+ 
+# second stage copies the static dist files and Node server files
+FROM node:16 as production-stage
 WORKDIR /app
+COPY package.json vueBaseAppServer.js ./
+COPY --from=build-stage /build/dist/ dist/
+RUN npm install --omit=dev
+RUN rm -rf build
 
-# Copy the app package and package-lock.json file
-COPY package*.json ./
-
-# Copy local directories to the current local directory of our docker image (/app)
-COPY ./src ./src
-COPY ./public ./public
-
-# Install node packages, install serve, build the app, and remove dependencies at the end
-RUN npm install \
-    && npm install -g serve \
-    && npm run build \
-    && rm -fr node_modules
-
+# open port 3000 and run Node server
 EXPOSE 3000
-
-# Start the app using serve command
-CMD [ "serve", "-s", "build" ]
+CMD [ "node", "vueBaseAppServer.js" ]
