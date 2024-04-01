@@ -107,6 +107,11 @@ const MainRoutes = {
             component: () => import('@/views/contact/ContactPage.vue')
         },
         {
+            name: 'Profile',
+            path: '/profile',
+            component: () => import('@/views/profile/ProfilePage.vue')
+        },
+        {
             name: 'other',
             path: '/sample-page',
             component: () => import('@/views/StarterPage.vue')

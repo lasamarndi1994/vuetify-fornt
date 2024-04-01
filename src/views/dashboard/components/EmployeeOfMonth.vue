@@ -43,7 +43,8 @@
                         </div>
                     </div>
 
-                    <v-carousel :continuous="false" :show-arrows="false" v-model="model" hide-delimiter-background>
+                    <v-carousel :continuous="false" :show-arrows="false" v-model="model" hide-delimiters
+                        hide-delimiter-background height="300">
                         <v-carousel-item v-for="(slide, i) in slides" :key="i">
                             <v-row class="mt-5">
                                 <v-col cols="12" md="6" sm="12">
@@ -78,7 +79,7 @@
                                                     </v-avatar>
                                                 </div>
                                                 <div>
-                                                    <span class="mb-0 px-2 "><b>Employee Policy</b></span>
+                                                    <span class="mb-0 px-1 "><b>Employee Policy</b></span>
                                                 </div>
                                             </div>
                                             <div class="mt-3">
