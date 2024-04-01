@@ -38,7 +38,7 @@ jobs:
 
     - name: Same run into docker
       run: | 
-        docker push ${{ secrets.DOCKERHUB_USERNAME }}/image:tagname
+        docker push lasamarndi1995/image:tagname
 
 
 
