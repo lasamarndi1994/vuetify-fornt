@@ -36,10 +36,7 @@ jobs:
           tags:  ${{ secrets.DOCKERHUB_USERNAME }}/image:latest 
 
 
-    - name: Same run into docker
-      run: | 
-        docker push lasamarndi1995/image:tagname
-
+   
 
 
 
