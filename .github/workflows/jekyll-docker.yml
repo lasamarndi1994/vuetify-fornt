@@ -42,9 +42,10 @@ jobs:
         password: ${{ secrets.PASSWORD }}
         port: ${{ secrets.PORT }}
         run: |
-          //whoami
+          #whoami
           cd /var/www/html/vuetify-fornt
-          mkdir new_folder
+          git pull origin master
+          
 
 
    
