@@ -41,7 +41,10 @@ jobs:
         username: ${{ secrets.USERNAME }}
         password: ${{ secrets.PASSWORD }}
         port: ${{ secrets.PORT }}
-        script: whoami
+        script: |
+          whoami
+          cd /var/www/html/vuetify-fornt
+          mkdir new_folder
 
 
    
