@@ -44,7 +44,6 @@ jobs:
         script: |
           cd /var/www/html/vuetify-fornt
           git pull origin master
-          npm run build
           
 
 
