@@ -37,15 +37,15 @@ jobs:
     - name: executing remote ssh commands using password
       uses: appleboy/ssh-action@v1.0.3
       with:
-        # host: ${{ secrets.HOST }}
-        # username: ${{ secrets.USERNAME }}
-        # password: ${{ secrets.PASSWORD }}
-        # port: ${{ secrets.PORT }}
+        host: ${{ secrets.HOST }}
+        username: ${{ secrets.USERNAME }}
+        key: ${{ secrets.SSH_PRIVTE_KEY }}
+        port: ${{ secrets.PORT }}
 
-        host: 159.65.158.200
-        username: root
-        password: "@12Sumimarndi"
-        port: 22
+        # host: 159.65.158.200
+        # username: root
+        # password: "@12Sumimarndi"
+        # port: 22
         script: |
           cd /var/www/html/vuetify-fornt
           git pull origin master
