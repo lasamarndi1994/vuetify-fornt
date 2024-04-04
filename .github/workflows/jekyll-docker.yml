@@ -39,7 +39,7 @@ jobs:
       with:
         host: ${{ secrets.HOST }}
         username: ${{ secrets.USERNAME }}
-        key: ${{ secrets.SSH_PRIVATEKEY_RSA }}
+        key: ""
         port: ${{ secrets.PORT }}
 
         # host: 159.65.158.200
