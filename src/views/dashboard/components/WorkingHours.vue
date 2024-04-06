@@ -1,7 +1,7 @@
-<script setup lang="ts">
+<script setup>
 import { computed } from 'vue';
 import { useTheme } from 'vuetify';
-
+import apexchart from 'vue3-apexcharts';
 
 const theme = useTheme();
 const InfoColor = theme.current.value.colors.info;
